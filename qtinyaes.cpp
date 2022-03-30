@@ -37,7 +37,7 @@ QByteArray QTinyAes::generateKey()
 #endif
 
 QTinyAes::QTinyAes(QObject *parent) :
-	QObject(parent),
+	QObject{parent},
 	d(new QTinyAesPrivate())
 {}
 
