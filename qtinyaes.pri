@@ -1,3 +1,6 @@
+Q_QTINIAES=true
+DEFINES+=Q_QTINIAES
+
 HEADERS += \
         $$PWD/qtinyaes.h \
         $$PWD/tiny-AES-c/aes.h \
