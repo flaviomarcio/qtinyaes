@@ -10,9 +10,9 @@ class QTinyAes : public QObject
 {
 	Q_OBJECT
 
-	Q_PROPERTY(CipherMode mode READ mode WRITE setMode)
-	Q_PROPERTY(QByteArray key READ key WRITE setKey RESET resetKey)
-	Q_PROPERTY(QByteArray iv READ iv WRITE setIv RESET resetIv)
+    Q_PROPERTY(CipherMode mode READ mode WRITE setMode NOTIFY modeChanged)
+    Q_PROPERTY(QByteArray key READ key WRITE setKey RESET resetKey NOTIFY keyChanged)
+    Q_PROPERTY(QByteArray iv READ iv WRITE setIv RESET resetIv NOTIFY ivChanged)
 
 public:
 	enum CipherMode {
@@ -62,6 +62,10 @@ private:
 
 	static void preparePlainText(QByteArray &data);
 	static void restorePlainText(QByteArray &data);
+signals:
+    void modeChanged();
+    void keyChanged();
+    void ivChanged();
 };
 
 #endif // QTINYAES
