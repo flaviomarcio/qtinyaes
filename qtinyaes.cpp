@@ -94,7 +94,7 @@ void QTinyAes::setIv(const QByteArray &iv)
 	if(!iv.isEmpty()) {
 		Q_ASSERT_X(iv.size() >= BlockSize, Q_FUNC_INFO, "The initialisation vector must be at least QTinyAes::BLOCKSIZE bytes long (or empty)");
 		if(iv.size() > BlockSize)
-			qWarning() << "IV is longer then QTinyAes::BLOCKSIZE - the rest will be truncated";
+            qWarning() << "IV is longer then QTinyAes::BLOCKSIZE - the rest will be truncated";
 		d->iv = iv.mid(0, BlockSize);
 	}
 }
