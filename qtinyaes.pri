@@ -10,7 +10,7 @@ SOURCES += \
         $$PWD/qtinyaes.cpp \
         $$PWD/tiny-AES-c/aes.c
 
-INCLUDEPATH += $$PWD
+INCLUDEPATH += $$PWD/
 INCLUDEPATH += $$PWD/tiny-AES-c
 
 QDEP_DEPENDS += $$PWD/tiny-AES-c
